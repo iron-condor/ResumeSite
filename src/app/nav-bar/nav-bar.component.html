@@ -5,5 +5,5 @@
   <li ngbNavItem>
     <button ngbNavLink routerLink="/resume" class="btn" ariaCurrentWhenActive="page">Resume</button>
   </li>
-  <button class="btn btn-tertiary" (click)="toggleTheme()" >{{ getCurrentTheme() }}</button>
+  <button class="btn btn-tertiary" (click)="toggleTheme()" ><fa-icon [icon]="getCurrentTheme()"/></button>
 </ul>
