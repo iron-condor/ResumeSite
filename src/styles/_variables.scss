@@ -1,0 +1,59 @@
+// Light theme
+$primary_light: #6200EE;
+$primaryVariant_light: #3700B3;
+$secondary_light: #03DAC6;
+// Not defined for dark for some reason
+$secondaryVariant_light: #018786;
+$background_light: #FFFFFF;
+$surface_light: #FFFFFF;
+$error_light: #B00020;
+$onPrimary_light: #FFFFFF;
+$onSecondary_light: #000000;
+$onBackground_light: #000000;
+$onSurface_light: #000000;
+$onError_light: #FFFFFF;
+
+// Dark theme
+$primary_dark: #BB86FC;
+$primaryVariant_dark: #3700B3;
+$secondary_dark: #03DAC6;
+$background_dark: #121212;
+$surface_dark: #121212;
+$error_dark: #CF6679;
+$onPrimary_dark: #000000;
+$onSecondary_dark: #000000;
+$onBackground_dark: #FFFFFF;
+$onSurface_dark: #FFFFFF;
+$onError_dark: #000000;
+
+// mixin that enables css variables in light mode
+@mixin lighten() {
+  --primary: #{$primary_light};
+  --primaryVariant: #{$primaryVariant_light};
+  --secondary: #{$secondary_light};
+  // Not defined for dark for some reason
+  --secondaryVariant: #{$secondaryVariant_light};
+  --background: #{$background_light};
+  --surface: #{$surface_light};
+  --error: #{$error_light};
+  --onPrimary: #{$onPrimary_light};
+  --onSecondary: #{$onSecondary_light};
+  --onBackground: #{$onBackground_light};
+  --onSurface: #{$onSurface_light};
+  --onError: #{$onError_light};
+}
+
+// mixin that enables css variables in dark mode
+@mixin darken() {
+  --primary: #{$primary_dark};
+  --primaryVariant: #{$primaryVariant_dark};
+  --secondary: #{$secondary_dark};
+  --background: #{$background_dark};
+  --surface: #{$surface_dark};
+  --error: #{$error_dark};
+  --onPrimary: #{$onPrimary_dark};
+  --onSecondary: #{$onSecondary_dark};
+  --onBackground: #{$onBackground_dark};
+  --onSurface: #{$onSurface_dark};
+  --onError: #{$onError_dark};
+}

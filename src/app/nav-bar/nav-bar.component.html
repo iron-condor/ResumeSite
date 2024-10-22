@@ -1,0 +1,9 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs nav-bar">
+  <li ngbNavItem>
+    <button ngbNavLink routerLink="/home" class="btn" ariaCurrentWhenActive="page">Home</button>
+  </li>
+  <li ngbNavItem>
+    <button ngbNavLink routerLink="/resume" class="btn" ariaCurrentWhenActive="page">Resume</button>
+  </li>
+  <button class="btn btn-tertiary" (click)="toggleTheme()" >{{ getCurrentTheme() }}</button>
+</ul>

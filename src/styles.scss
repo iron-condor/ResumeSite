@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import "styles/_variables";
+
+body.dark {
+  @include darken();
+}
+
+body.light {
+  @include lighten();
+}
+
+body {
+  background-color: var(--background);
+  color: var(--onBackground);
+}

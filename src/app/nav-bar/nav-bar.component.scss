@@ -1,0 +1,9 @@
+.nav-bar {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+
+  .btn:not(.active) {
+    color: var(--on-primary);
+  }
+}
