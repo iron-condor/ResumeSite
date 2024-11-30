@@ -25,4 +25,8 @@ export class NavBarComponent {
   toggleTheme() {
     this.themeToggleService.toggleTheme();
   }
+
+  openGithub() {
+    location.href = "https://www.github.com/iron-condor";
+  }
 }
