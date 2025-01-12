@@ -1,0 +1,34 @@
+.experience-page {
+  margin: 2em;
+}
+
+.spread-elems {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted var(--onBackground);
+}
+
+.job-entry {
+  width: 100%;
+
+  // Layout for wider screens (e.g. non-mobile)
+  @media (min-width: 506px) {
+    .job-left-div {
+      display: flex;
+      gap: 5em;
+    }
+  }
+
+  .job-headers {
+    flex: 3;
+  }
+
+  .job-picture-div {
+    flex: 1;
+
+    .job-img {
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+}

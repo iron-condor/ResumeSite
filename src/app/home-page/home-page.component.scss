@@ -1,0 +1,17 @@
+.pfp-center-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: serif;
+
+  .pfp {
+    border-radius: 100%;
+  }
+}
+
+.home-page-body-text {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}

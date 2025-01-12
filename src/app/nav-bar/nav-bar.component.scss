@@ -1,21 +1,14 @@
 .nav-bar {
   background-color: var(--primary);
   display: flex;
-  border-bottom: 0px;
-  // justify-content: center;
 
   .btn:not(.active) {
     color: var(--onPrimary);
   }
 
-  .btn {
-    height: 43px;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-  }
-
   .float-end-group {
-    margin-left: auto;
+    display: flex;
+    flex-wrap: nowrap;
 
     button {
       display: flex;
@@ -30,5 +23,22 @@
 
   .octicon-mark-github {
     fill: var(--onPrimary);
+  }
+}
+
+// Layout for wider screens (e.g. non-mobile)
+@media (min-width: 506px) {
+  .nav-bar {
+    border-bottom: 0px;
+    // justify-content: center;  
+    .btn {
+      height: 43px;
+      border-bottom-left-radius: 0%;
+      border-bottom-right-radius: 0%;
+    }
+
+    .float-end-group {
+      margin-left: auto;
+    }
   }
 }
