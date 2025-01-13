@@ -25,7 +25,7 @@ export class NavBarComponent {
   moonIcon = faMoon;
   sunIcon = faSun;
   themeIconAnimation: AnimationProp | undefined = undefined;
-  active = 1;
+  active = 0;
 
   getActiveTab(url: string): number {
     switch (url) {
@@ -37,7 +37,7 @@ export class NavBarComponent {
       case "/resume":
         return 3;
       default:
-        return 1;
+        return 0;
     }
   }
 
