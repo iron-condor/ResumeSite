@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   font-family: serif;
+  margin-top: 20px;
 
   .pfp {
     border-radius: 100%;
@@ -20,6 +21,10 @@
   .home-page-body-text {
     width: 50%;
   }
+
+  .skills-list {
+    columns: 2;
+  }
 }
 
 // Layout for thinner screens (e.g. mobile)
@@ -27,15 +32,35 @@
   .home-page-body-text {
     width: 80%;
   }
+
+  .skills-list {
+    columns: 1;
+  }
 }
 
 
 .skills-list {
-  columns: 2;
+
+  li {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1em;
+    break-inside: avoid-column;
+    // Prevents firefox from breaking text between columns
+    overflow: hidden;
+  }
 }
 
 .footer {
-  margin-top: 10%;
+  margin-top: 40px;
   text-align: center;
   color: var(--onBackground);
+}
+
+.skill-icon {
+  height: 2em;
+  width: 2em;
+  display: inline;
+  fill: var(--onBackground);
 }

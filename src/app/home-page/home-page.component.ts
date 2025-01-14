@@ -13,5 +13,17 @@ import { linkedInURL } from '../app.config';
 })
 export class HomePageComponent {
   pfpUrl = '/assets/pfp.jpg';
+
+  javaIcon = '/assets/icons/java.png';
+  junitIcon = '/assets/icons/junit5.png';
+  mockitoIcon = '/assets/icons/mockito.png';
+  mavenIcon = '/assets/icons/maven.png';
+  postgresIcon = '/assets/icons/postgres.png';
+  jenkinsIcon = '/assets/icons/jenkins.png';
+  rabbitmqIcon = '/assets/icons/rabbitmq.png';
+  kafkaIcon = '/assets/icons/kafka.png'
+  tomcatIcon = '/assets/icons/tomcat.png'
+  linuxIcon = '/assets/icons/linux.png'
+
   linkedInURL = linkedInURL;
 }
