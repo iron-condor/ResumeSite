@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "deploy": "git subtree push --prefix dist origin gh-pages",
     "serve:ssr:ResumeSite": "node dist/resume-site/server/server.mjs"
   },
   "private": true,
