@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FileService } from '../file.service';
+import { linkedInURL } from '../app.config';
 
 @Component({
   selector: 'resume-component',
@@ -10,6 +11,8 @@ import { FileService } from '../file.service';
 })
 export class ResumeComponent {
   constructor(private fileService: FileService) {}
+
+  linkedInURL = linkedInURL;
 
   downloadResume() {
     const url = '/assets/resume.pdf';

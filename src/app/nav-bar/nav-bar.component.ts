@@ -4,6 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Theme, ThemeToggleService } from '../theme-toggle.service';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule, AnimationProp } from '@fortawesome/angular-fontawesome';
+import { githubURL, linkedInURL } from '../app.config';
 
 @Component({
   selector: 'nav-bar',
@@ -58,6 +59,10 @@ export class NavBarComponent {
   }
 
   openGithub() {
-    location.href = "https://www.github.com/iron-condor";
+    location.href = githubURL;
+  }
+
+  openLinkedin() {
+    location.href = linkedInURL;
   }
 }

@@ -11,7 +11,31 @@
 }
 
 .home-page-body-text {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Layout for wider screens (e.g. non-mobile)
+@media (min-width: 506px) {
+  .home-page-body-text {
+    width: 50%;
+  }
+}
+
+// Layout for thinner screens (e.g. mobile)
+@media (max-width: 506px) {
+  .home-page-body-text {
+    width: 80%;
+  }
+}
+
+
+.skills-list {
+  columns: 2;
+}
+
+.footer {
+  margin-top: 10%;
+  text-align: center;
+  color: var(--onBackground);
 }

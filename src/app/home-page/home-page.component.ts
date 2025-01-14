@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import { NgOptimizedImage } from '@angular/common';
+import { linkedInURL } from '../app.config';
 
 @Component({
   selector: 'home-page',
@@ -11,5 +12,6 @@ import { NgOptimizedImage } from '@angular/common';
   styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent {
-  pfpUrl = '/assets/pfp.jpg'
+  pfpUrl = '/assets/pfp.jpg';
+  linkedInURL = linkedInURL;
 }

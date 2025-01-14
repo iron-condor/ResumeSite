@@ -1,9 +1,9 @@
 // Light theme
 $primary_light: #00ACC1;
 $primaryVariant_light: #006064;
-$secondary_light: #80CBC4;
+$secondary_light: #69aaa4;
 // Not defined for dark for some reason
-$secondaryVariant_light: #26A69A;
+$secondaryVariant_light: #21887e;
 $background_light: #FFFFFF;
 $surface_light: #FFFFFF;
 $error_light: #B00020;
@@ -16,7 +16,8 @@ $onError_light: #FFFFFF;
 // Dark theme
 $primary_dark: #008a9a;
 $primaryVariant_dark: #00ACC1;
-$secondary_dark: #80CBC4;
+$secondary_dark: #26A69A;
+$secondaryVariant_dark: #80CBC4;
 $background_dark: #121212;
 $surface_dark: #121212;
 $error_dark: #CF6679;
@@ -31,7 +32,6 @@ $onError_dark: #000000;
   --primary: #{$primary_light};
   --primaryVariant: #{$primaryVariant_light};
   --secondary: #{$secondary_light};
-  // Not defined for dark for some reason
   --secondaryVariant: #{$secondaryVariant_light};
   --background: #{$background_light};
   --surface: #{$surface_light};
@@ -48,6 +48,7 @@ $onError_dark: #000000;
   --primary: #{$primary_dark};
   --primaryVariant: #{$primaryVariant_dark};
   --secondary: #{$secondary_dark};
+  --secondaryVariant: #{$secondaryVariant_dark};
   --background: #{$background_dark};
   --surface: #{$surface_dark};
   --error: #{$error_dark};

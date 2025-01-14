@@ -16,3 +16,13 @@ body {
   background-color: var(--background);
   color: var(--onBackground);
 }
+
+/* unvisited */
+a:link {
+  color: var(--secondaryVariant);
+}
+
+/* visited link */
+a:visited {
+  color: var(--secondary);
+}
