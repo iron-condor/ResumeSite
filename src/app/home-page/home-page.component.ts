@@ -24,6 +24,15 @@ export class HomePageComponent {
   kafkaIcon = '/assets/icons/kafka.png'
   tomcatIcon = '/assets/icons/tomcat.png'
   linuxIcon = '/assets/icons/linux.png'
+  handshakeIcon = '/assets/icons/handshake.png'
+  restapiIcon = '/assets/icons/restapi.png'
+  websocketIcon = '/assets/icons/websocket.png'
+  scrumIcon = '/assets/icons/scrum.png'
+  sqlIcon = '/assets/icons/sql.png'
+  smsIcon = '/assets/icons/sms.png'
+  phoneIcon = '/assets/icons/phone.png'
+  cplusplusIcon = '/assets/icons/cplusplus.png'
+  jiraIcon = '/assets/icons/jira.png'
 
   linkedInURL = linkedInURL;
 }
