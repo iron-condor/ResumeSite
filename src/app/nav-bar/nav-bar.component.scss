@@ -1,8 +1,77 @@
 .nav-bar {
-  background-color: var(--onBackground);
-  display: flex;
   position: sticky;
   top: 0;
+  flex-wrap: nowrap;
+  background-color: var(--onBackground);
+  border-bottom: 0px;
+  display: block;
+
+  .nav-controls-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .container-fluid {
+    padding: 0px;
+  }
+
+  #name-label {
+    font-size: 22pt;
+    margin-left: 0.5em;
+    color: var(--background);
+  }
+
+  .navbar-toggler {
+    fill: var(--background);
+    color: var(--background);
+    width: 43px;
+    margin-left: auto;
+  }
+
+  .btn {
+    border-radius: 0%;
+    height: 43px;
+  }
+
+  .btn:hover {
+    background-color: var(--secondary);
+  }
+
+  .contact-me-collapse {
+    // border: 1px solid var(--secondary);
+
+    svg {
+      fill: inherit;
+    }
+
+    .btn-with-icon {
+      color: var(--secondary);
+      fill: var(--secondary);
+    }
+
+    .btn-with-icon:hover {
+      color: var(--onSecondary);
+      fill: var(--onSecondary);
+    }
+  }
+
+  .btn-with-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    label {
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    border: 0px;
+  }
+}
+
+
+.nav-bar-list {
+  display: flex;
 
   .btn {
     border: none;
@@ -17,21 +86,6 @@
     background-color: var(--primary);
   }
 
-  .float-end-group {
-    display: flex;
-    flex-wrap: nowrap;
-
-    button {
-      display: flex;
-      align-items: center;
-      label {
-        margin-right: 5px;
-        cursor: pointer;
-      }
-      border: 0px;
-    }
-  }
-
   .octicon-mark-github {
     fill: var(--background);
   }
@@ -43,16 +97,21 @@
 
 // Layout for wider screens (e.g. non-mobile)
 @media (min-width: 506px) {
-  .nav-bar {
-    border-bottom: 0px;
-    // justify-content: center;  
-    .btn {
-      border-radius: 0%;
-      height: 43px;
-    }
+  .nav-controls-container, .navbar-toggler, #name-label {
+    display: none;
+  }
 
-    .float-end-group {
-      margin-left: auto;
-    }
+  .navbar-collapse.collapse:not(.show) {
+    display: block;
+  }
+}
+
+// Layout for thinner screens (e.g. mobile)
+@media (max-width: 506px) {
+  .nav-bar-list {
+    display: block;
+  }
+  .nav-item > .btn {
+    width: 100%;
   }
 }

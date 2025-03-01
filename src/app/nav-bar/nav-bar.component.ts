@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Theme, ThemeToggleService } from '../theme-toggle.service';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun, faBars, faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule, AnimationProp } from '@fortawesome/angular-fontawesome';
 import { githubURL, linkedInURL } from '../app.config';
 
@@ -25,8 +25,15 @@ export class NavBarComponent {
 
   moonIcon = faMoon;
   sunIcon = faSun;
+  faBars = faBars;
+  caretUp = faCaretUp;
+  caretDown = faCaretDown;
   themeIconAnimation: AnimationProp | undefined = undefined;
+  contactMeCollapseAnimation: AnimationProp | undefined = undefined;
   active = 0;
+
+  isMenuCollapsed = true;
+  isContactMeCollapsed = true;
 
   getActiveTab(url: string): number {
     switch (url) {
@@ -48,12 +55,24 @@ export class NavBarComponent {
     return this.themeIconAnimation;
   }
 
+  getContactMeCollapseAnimation(): AnimationProp | undefined {
+    return this.contactMeCollapseAnimation;
+  }
+
   toggleTheme() {
     this.themeIconAnimation = "bounce";
     this.themeToggleService.toggleTheme();
     setTimeout(() => {
       this.themeIconAnimation = undefined;
     }, 500);
+  }
+
+  toggleContactMeCollapsed() {
+    this.contactMeCollapseAnimation = "flip";
+    setTimeout(() => {
+      this.isContactMeCollapsed = !this.isContactMeCollapsed;
+      this.contactMeCollapseAnimation = undefined;
+    }, 250);
   }
 
   openGithub() {
