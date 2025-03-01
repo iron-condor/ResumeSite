@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Theme, ThemeToggleService } from '../theme-toggle.service';
-import { faMoon, faSun, faBars, faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun, faBars, faCaretDown, faCaretUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule, AnimationProp } from '@fortawesome/angular-fontawesome';
 import { githubURL, linkedInURL } from '../app.config';
 
@@ -28,12 +28,14 @@ export class NavBarComponent {
   faBars = faBars;
   caretUp = faCaretUp;
   caretDown = faCaretDown;
+  faEnvelope = faEnvelope;
+  contactMeCollapseIcon = faCaretDown;
   themeIconAnimation: AnimationProp | undefined = undefined;
   contactMeCollapseAnimation: AnimationProp | undefined = undefined;
   active = 0;
 
   isMenuCollapsed = true;
-  isContactMeCollapsed = true;
+  isContactMeCollapsed = false;
 
   getActiveTab(url: string): number {
     switch (url) {
@@ -69,9 +71,10 @@ export class NavBarComponent {
 
   toggleContactMeCollapsed() {
     this.contactMeCollapseAnimation = "flip";
+    this.isContactMeCollapsed = !this.isContactMeCollapsed;
     setTimeout(() => {
-      this.isContactMeCollapsed = !this.isContactMeCollapsed;
       this.contactMeCollapseAnimation = undefined;
+      this.contactMeCollapseIcon = this.isContactMeCollapsed ? faCaretDown : faCaretUp;
     }, 250);
   }
 

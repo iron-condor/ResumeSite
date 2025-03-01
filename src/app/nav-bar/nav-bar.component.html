@@ -17,9 +17,9 @@
 
         <li class="nav-item">
           <button class="btn" (click)="toggleContactMeCollapsed()">
-            Contact me
+            Get in Touch
             <fa-icon 
-              [icon]="isContactMeCollapsed ? caretUp : caretDown"
+              [icon]="contactMeCollapseIcon"
               [animation]="getContactMeCollapseAnimation()"
               style="--fa-animation-duration: 0.5s; --fa-flip-x: 1; --fa-flip-y: 0;"
             />
@@ -28,7 +28,7 @@
             <!-- LinkedIn icon-->
             <button class="btn btn-tertiary btn-with-icon" (click)="openLinkedin()">
               <label for="linkedinIcon">LinkedIn</label>
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="linkedin-icon v-align-middle color-fg-default" xmlns="http://www.w3.org/2000/svg">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="linkedin-icon v-align-middle color-fg-default btn-icon" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z"/>
                 <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z"/>
                 <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z"/>
@@ -37,11 +37,17 @@
             </button>
             <!-- Github icon-->
             <button class="btn btn-tertiary btn-with-icon" (click)="openGithub()">
-              <label for="githubIcon">Github</label>
-              <svg id="githubIcon" height="32" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle color-fg-default">
+              <label for="githubIcon">GitHub</label>
+              <svg id="githubIcon" width="24" height="24" aria-hidden="true" viewBox="0 0 24 24" version="1.1" data-view-component="true" class="octicon octicon-mark-github v-align-middle color-fg-default btn-icon">
                 <path d="M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z"></path>
               </svg>
             </button>
+            <a href="mailto:chris@chriswantsajob.com">
+              <button class="btn btn-tertiary btn-with-icon">
+                <label for="emailIcon">E-mail</label>
+                <fa-icon id="emailIcon" class="btn-icon" [icon]="faEnvelope" size="xl"/>
+              </button>
+            </a>
           </div>
         </li>
       

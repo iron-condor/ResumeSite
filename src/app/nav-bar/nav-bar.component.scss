@@ -45,9 +45,18 @@
       fill: inherit;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     .btn-with-icon {
       color: var(--secondary);
       fill: var(--secondary);
+      label {
+        margin-left: 0px;
+        width: 4em;
+        text-align: left;
+      }
     }
 
     .btn-with-icon:hover {
@@ -86,11 +95,7 @@
     background-color: var(--primary);
   }
 
-  .octicon-mark-github {
-    fill: var(--background);
-  }
-
-  .linkedin-icon {
+  .btn-icon {
     fill: var(--background);
   }
 }
