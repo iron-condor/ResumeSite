@@ -52,15 +52,22 @@
   }
 }
 
-.footer {
-  margin-top: 40px;
-  text-align: center;
-  color: var(--onBackground);
-}
-
 .skill-icon {
   height: 2em;
   width: 2em;
   display: inline;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   fill: var(--onBackground);
+}
+
+.resume-button {
+  background-color: var(--primary);
+  color: var(--onPrimary);
+}
+
+.resume-link {
+  color: var(--secondaryVariant);
+  cursor: pointer;
+  text-decoration: underline; 
 }

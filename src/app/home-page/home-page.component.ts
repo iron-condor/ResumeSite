@@ -3,6 +3,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import { NgOptimizedImage } from '@angular/common';
 import { linkedInURL } from '../app.config';
+import { FileService } from '../file.service';
 
 @Component({
   selector: 'home-page',
@@ -12,6 +13,7 @@ import { linkedInURL } from '../app.config';
   styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent {
+  constructor(private fileService: FileService) {}
   pfpUrl = '/assets/pfp.jpg';
 
   javaIcon = '/assets/icons/java.png';
@@ -35,4 +37,16 @@ export class HomePageComponent {
   jiraIcon = '/assets/icons/jira.png'
 
   linkedInURL = linkedInURL;
+
+  downloadResume() {
+    const url = '/assets/resume.pdf';
+    this.fileService.downloadFile(url).subscribe((blob) => {
+      const a = document.createElement('a');
+      const objectUrl = URL.createObjectURL(blob);
+      a.href = objectUrl;
+      a.download = 'chris-loftis-resume.pdf';
+      a.click();
+      URL.revokeObjectURL(objectUrl);
+    });
+  }
 }

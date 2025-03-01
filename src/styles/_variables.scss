@@ -1,31 +1,31 @@
 // Light theme
-$primary_light: #00ACC1;
-$primaryVariant_light: #006064;
+$primary_light: #4e9ea8;
+$primaryVariant_light: #2a6163;
 $secondary_light: #5d9690;
 // Not defined for dark for some reason
-$secondaryVariant_light: #21887e;
-$background_light: #FFFFFF;
-$surface_light: #FFFFFF;
+$secondaryVariant_light: #33887f;
+$background_light: #f0f0f0;
+$surface_light: #f0f0f0;
 $error_light: #B00020;
-$onPrimary_light: #FFFFFF;
-$onSecondary_light: #000000;
-$onBackground_light: #000000;
-$onSurface_light: #000000;
-$onError_light: #FFFFFF;
+$onPrimary_light: #f0f0f0;
+$onSecondary_light: #272727;
+$onBackground_light: #272727;
+$onSurface_light: #272727;
+$onError_light: #f0f0f0;
 
 // Dark theme
-$primary_dark: #008a9a;
-$primaryVariant_dark: #00ACC1;
-$secondary_dark: #26A69A;
+$primary_dark: #3b8b94;
+$primaryVariant_dark: #5ab3be;
+$secondary_dark: #48a198;
 $secondaryVariant_dark: #80CBC4;
 $background_dark: #121212;
 $surface_dark: #121212;
 $error_dark: #CF6679;
-$onPrimary_dark: #FFFFFF;
-$onSecondary_dark: #000000;
-$onBackground_dark: #FFFFFF;
-$onSurface_dark: #FFFFFF;
-$onError_dark: #000000;
+$onPrimary_dark: #f0f0f0;
+$onSecondary_dark: #272727;
+$onBackground_dark: #f0f0f0;
+$onSurface_dark: #f0f0f0;
+$onError_dark: #272727;
 
 // mixin that enables css variables in light mode
 @mixin lighten() {

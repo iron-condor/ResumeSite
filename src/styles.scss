@@ -26,3 +26,10 @@ a:link {
 a:visited {
   color: var(--secondary);
 }
+
+.footer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--onBackground);
+}

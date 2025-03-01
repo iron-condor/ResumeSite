@@ -35,8 +35,6 @@ export class NavBarComponent {
         return 1;
       case "/experience":
         return 2;
-      case "/resume":
-        return 3;
       default:
         return 0;
     }

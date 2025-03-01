@@ -1,9 +1,20 @@
 .nav-bar {
-  background-color: var(--primary);
+  background-color: var(--onBackground);
   display: flex;
+  position: sticky;
+  top: 0;
+
+  .btn {
+    border: none;
+  }
 
   .btn:not(.active) {
+    color: var(--background);
+  }
+
+  .btn.active {
     color: var(--onPrimary);
+    background-color: var(--primary);
   }
 
   .float-end-group {
@@ -22,11 +33,11 @@
   }
 
   .octicon-mark-github {
-    fill: var(--onPrimary);
+    fill: var(--background);
   }
 
   .linkedin-icon {
-    fill: var(--onPrimary);
+    fill: var(--background);
   }
 }
 
@@ -36,9 +47,8 @@
     border-bottom: 0px;
     // justify-content: center;  
     .btn {
+      border-radius: 0%;
       height: 43px;
-      border-bottom-left-radius: 0%;
-      border-bottom-right-radius: 0%;
     }
 
     .float-end-group {
