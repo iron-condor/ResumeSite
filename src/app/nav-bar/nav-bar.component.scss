@@ -101,13 +101,13 @@
 }
 
 #themeToggleButton {
-  color: var(--secondaryVariant);
+  color: var(--secondary);
   background-color: var(--onSecondary);
 }
 
 #themeToggleButton:hover {
   color: var(--onSecondary);
-  background-color: var(--secondaryVariant);
+  background-color: var(--secondary);
 }
 
 // Layout for wider screens (e.g. non-mobile)

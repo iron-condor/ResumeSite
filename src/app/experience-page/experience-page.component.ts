@@ -49,13 +49,15 @@ export class ExperiencePageComponent {
       ],
       responsibilities: [
         "Developed and maintained telecom software that powers enterprise call centers using Java, SQL and CCXML/VXML",
-        "Worked with other software developers, QA engineers and project managers on Scrum teams",
-        "Architected, developed and deployed distributed reporting solutions using RabbitMQ and Postgres",
+        "Worked with other software developers, QA engineers and project managers on Scrum teams to iteratively add features and address defects in software",
+        "Architected, developed and deployed distributed monitoring and reporting solutions using RabbitMQ and Postgres",
         "Served as technical lead/owner of mission critical software for high-availability systems",
         "Met with project managers, engineers and stakeholders from other companies to understand their needs and develop custom systems to integrate with their proprietary infrastructure",
+        "Digested protocol specifications to create effective product integrations with existing protocols such as SMPP",
         "Triaged and debugged live issues with high-volume production call centers during emergencies",
         "Wrote documentation and automated tests using JUnit5 and Mockito to ensure maintainability",
-        "Served as a mentor and a technical resource for interns during their projects"
+        "Served as a mentor and a technical resource for interns during their projects",
+        "Attended career fairs, reviewed technical assessments and interviewed interns for summer projects"
       ],
       technologies: [
         {title: "Java", logoURL: this.javaIcon},
@@ -83,11 +85,12 @@ export class ExperiencePageComponent {
       positions: [{title: "Undergraduate Research Assistant", start: "Sep 2019", end: "Dec 2020"}],
       responsibilities: [
         "Analyzed scientific problems to apply artificial intelligence and deep learning models",
-        "Studied and implemented existing machine, deep learning, and evolutionary programming models within larger systems to solve novel problems",
+        "Studied and implemented existing machine, deep learning, and evolutionary programming models within larger systems to find better systems for approximating thermal properties of hypothetical materials",
         "Rapidly learned new libraries and frameworks to implement them in more complex programs",
         "Generated and analyzed charts and statistics to find flaws and improvements with models",
+        "Compared performance of statistical, neural network and genetic algorithm models against thermal conductivity data",
         "Wrote and contributed to research articles within the fields of Computer Science/Materials Design",
-        "Preprocessed raw data and transformed it into a format interpreted by machine learning models",
+        "Preprocessed raw data and transformed it into a format interpretable by machine learning models",
         "Cooperated with a team of researchers and experts to further the field of materials design"
       ],
       technologies: [
