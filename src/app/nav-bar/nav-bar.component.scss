@@ -100,6 +100,16 @@
   }
 }
 
+#themeToggleButton {
+  color: var(--secondaryVariant);
+  background-color: var(--onSecondary);
+}
+
+#themeToggleButton:hover {
+  color: var(--onSecondary);
+  background-color: var(--secondaryVariant);
+}
+
 // Layout for wider screens (e.g. non-mobile)
 @media (min-width: 506px) {
   .nav-controls-container, .navbar-toggler, #name-label {
