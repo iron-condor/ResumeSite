@@ -1,0 +1,46 @@
+<section class="experience-entry">
+  <div class="job-title-logo">
+    <h2>
+      <a [href]="jobEntry.companyURL">{{jobEntry.companyName}}</a>
+      <span class="job-duration"> ({{jobEntry.duration}})</span>
+    </h2>
+    <img
+      [ngSrc]="jobEntry.logoURL"
+      width="105" height="45"
+      [alt]="'The logo for ' + jobEntry.companyName"
+      class="company-logo"
+    />
+  </div>
+  <h5>
+    {{jobEntry.latestPositionName}}
+    <fa-icon
+      *ngIf="jobEntry.positions.length > 1"
+      (click)="togglePositionsCollapsed()"
+      class="positions-toggle-icon"
+      [icon]="positionsCollapseIcon"
+      [animation]="getPositionsCollapseAnimation()"
+      style="--fa-animation-duration: 0.5s; --fa-flip-x: 1; --fa-flip-y: 0;"
+    />
+  </h5>
+  <div class="collapse" [ngbCollapse]="positionsCollapsed">
+    <ul class="positions-list">
+      <li *ngFor="let position of jobEntry.positions">
+        {{position.title}} ({{position.start}} - {{position.end}})
+      </li>
+    </ul>
+  </div>
+  <h4>Responsibilities</h4>
+  <ul class="responsibilities-list">
+    <li *ngFor="let responsibility of jobEntry.responsibilities">
+      {{responsibility}}
+    </li>
+  </ul>
+  <h4>Technologies</h4>
+  <ul class="technologies-list">
+    <li *ngFor="let technology of jobEntry.technologies">
+      <img [ngSrc]="technology.logoURL" width = "25" height = "25" class="technology-icon"/>
+      {{technology.title}}
+    </li>
+  </ul>
+  <hr *ngIf="!last"/>
+</section>

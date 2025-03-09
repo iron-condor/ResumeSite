@@ -35,7 +35,7 @@ export class NavBarComponent {
   active = 0;
 
   isMenuCollapsed = true;
-  isContactMeCollapsed = false;
+  isContactMeCollapsed = true;
 
   getActiveTab(url: string): number {
     switch (url) {

@@ -1,0 +1,54 @@
+.job-title-logo {
+  display: flex;
+}
+
+.positions-list {
+  list-style-type: none;
+}
+
+.technologies-list {
+  li {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1em;
+    break-inside: avoid-column;
+    // Prevents firefox from breaking text between columns
+    overflow: hidden;
+  }
+  .technology-icon {
+    height: 2em;
+    width: 2em;
+    display: inline;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    fill: var(--onBackground);
+  }
+}
+
+// Prevent the job duration from word wrapping on thin screens
+.job-duration {
+  white-space: nowrap;
+}
+
+// Layout for wider screens (e.g. non-mobile)
+@media (min-width: 850px) {
+  .company-logo {
+    margin-left: 1em;
+  }
+
+  .technologies-list {
+    columns: 2;
+  }
+}
+
+// Layout for thinner screens (e.g. mobile)
+@media (max-width: 850px) {
+  .job-title-logo {
+    flex-direction: column-reverse;
+  }
+
+  .technologies-list {
+    columns: 1;
+  }
+}

@@ -109,6 +109,13 @@
   .navbar-collapse.collapse:not(.show) {
     display: block;
   }
+
+  .contact-me-collapse {
+    // border: 1px solid var(--secondary);
+    position: absolute;
+    background-color: var(--onBackground);
+    width: 8.25em;
+  }
 }
 
 // Layout for thinner screens (e.g. mobile)
