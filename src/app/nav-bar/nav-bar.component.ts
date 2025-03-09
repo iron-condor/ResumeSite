@@ -29,6 +29,8 @@ export class NavBarComponent {
   caretUp = faCaretUp;
   caretDown = faCaretDown;
   faEnvelope = faEnvelope;
+  linkedInURL = linkedInURL;
+  githubURL = githubURL;
   contactMeCollapseIcon = faCaretDown;
   themeIconAnimation: AnimationProp | undefined = undefined;
   contactMeCollapseAnimation: AnimationProp | undefined = undefined;
