@@ -29,13 +29,13 @@
       </li>
     </ul>
   </div>
-  <h4>Responsibilities</h4>
+  <h5>Responsibilities</h5>
   <ul class="responsibilities-list">
     <li *ngFor="let responsibility of jobEntry.responsibilities">
       {{responsibility}}
     </li>
   </ul>
-  <h4>Technologies</h4>
+  <h5>Technologies</h5>
   <ul class="technologies-list">
     <li *ngFor="let technology of jobEntry.technologies">
       <img [ngSrc]="technology.logoURL" width = "25" height = "25" class="technology-icon"/>
