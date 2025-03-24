@@ -78,7 +78,7 @@ export class ExperiencePageComponent {
     },
     {
       companyName: "University of South Carolina",
-      companyURL: "https://mleg.cse.sc.edu",
+      companyURL: "http://mleg.cse.sc.edu",
       duration: "1.5 years",
       logoURL: this.mlegLogoUrl,
       latestPositionName: "Undergraduate Research Assistant",
