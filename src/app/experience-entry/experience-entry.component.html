@@ -36,7 +36,13 @@
   <ul class="responsibilities-list">
     @for (responsibility of jobEntry.responsibilities; track responsibility) {
       <li>
-        {{responsibility}}
+        @for (segment of responsibility.segments; track segment) {
+          @if (segment.url) {
+            <a [href]="segment.url">{{segment.text}}</a>
+          } @else {
+            {{segment.text}}
+          }
+        }
       </li>
     }
   </ul>

@@ -45,10 +45,20 @@ export interface JobEntry {
   latestPositionName: string;
   logoURL: string;
   positions: JobPosition[];
-  responsibilities: string[];
+  responsibilities: Responsibility[];
   technologies: JobTechnology[];
   logoHeight?: number;
   logoWidth?: number;
+}
+
+export interface Responsibility {
+  segments: ResponsibilitySegment[];
+}
+
+export interface ResponsibilitySegment {
+  text: string;
+  // Optional URL. If provided, the text will be rendered as a hyperlink
+  url?: string;
 }
 
 export interface JobPosition {
