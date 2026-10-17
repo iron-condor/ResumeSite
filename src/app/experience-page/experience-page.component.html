@@ -1,9 +1,10 @@
 <article class="experience-page">
-  <experience-entry
-    *ngFor="let job of jobs; let last = last"
-    [jobEntry]="job"
-    [last]="last"
-  />
+  @for (job of jobs; track job; let last = $last) {
+    <experience-entry
+      [jobEntry]="job"
+      [last]="last"
+      />
+  }
   <footer class="footer">
     Copyright © 2025 Chris Loftis
   </footer>

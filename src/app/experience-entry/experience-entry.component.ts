@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule, AnimationProp } from '@fortawesome/angular-fontawesome';
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
-import { NgForOf, NgIf, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'experience-entry',
-    imports: [NgbCollapse, FontAwesomeModule, NgForOf, NgIf, NgOptimizedImage],
+    imports: [NgbCollapse, FontAwesomeModule, NgOptimizedImage],
     templateUrl: './experience-entry.component.html',
     styleUrl: './experience-entry.component.scss'
 })

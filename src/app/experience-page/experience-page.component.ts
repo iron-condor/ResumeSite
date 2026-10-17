@@ -1,10 +1,10 @@
-import { NgForOf, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { ExperienceEntryComponent, JobEntry } from "../experience-entry/experience-entry.component";
 
 @Component({
     selector: 'app-experience-page',
-    imports: [NgOptimizedImage, ExperienceEntryComponent, NgForOf],
+    imports: [NgOptimizedImage, ExperienceEntryComponent],
     templateUrl: './experience-page.component.html',
     styleUrl: './experience-page.component.scss'
 })
