@@ -68,7 +68,7 @@ export class NavBarComponent {
     this.themeToggleService.toggleTheme();
     setTimeout(() => {
       this.themeIconAnimation = undefined;
-    }, 500);
+    }, 700);
   }
 
   toggleContactMeCollapsed() {
