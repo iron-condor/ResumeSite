@@ -19,21 +19,30 @@ export class ExperiencePageComponent {
   postgresIcon = '/assets/icons/postgres.png';
   jenkinsIcon = '/assets/icons/jenkins.png';
   rabbitmqIcon = '/assets/icons/rabbitmq.png';
-  kafkaIcon = '/assets/icons/kafka.png'
-  tomcatIcon = '/assets/icons/tomcat.png'
-  linuxIcon = '/assets/icons/linux.png'
-  restapiIcon = '/assets/icons/restapi.png'
-  websocketIcon = '/assets/icons/websocket.png'
-  sqlIcon = '/assets/icons/sql.png'
-  smsIcon = '/assets/icons/sms.png'
-  phoneIcon = '/assets/icons/phone.png'
-  cplusplusIcon = '/assets/icons/cplusplus.png'
-  pythonIcon = '/assets/icons/python.png'
-  scikitLearnIcon = '/assets/icons/scikitlearn.png'
-  numpyIcon = '/assets/icons/numpy.png'
-  kerasIcon = '/assets/icons/keras.png'
-  neuralNetworkIcon = '/assets/icons/neuralnetwork.png'
-  dnaIcon = '/assets/icons/dna.png'
+  kafkaIcon = '/assets/icons/kafka.png';
+  tomcatIcon = '/assets/icons/tomcat.png';
+  linuxIcon = '/assets/icons/linux.png';
+  restapiIcon = '/assets/icons/restapi.png';
+  websocketIcon = '/assets/icons/websocket.png';
+  sqlIcon = '/assets/icons/sql.png';
+  smsIcon = '/assets/icons/sms.png';
+  phoneIcon = '/assets/icons/phone.png';
+  cplusplusIcon = '/assets/icons/cplusplus.png';
+  pythonIcon = '/assets/icons/python.png';
+  scikitLearnIcon = '/assets/icons/scikitlearn.png';
+  numpyIcon = '/assets/icons/numpy.png';
+  kerasIcon = '/assets/icons/keras.png';
+  neuralNetworkIcon = '/assets/icons/neuralnetwork.png';
+  dnaIcon = '/assets/icons/dna.png';
+  kotlinIcon = '/assets/icons/kotlin.png';
+  kubernetesIcon = '/assets/icons/kubernetes.png';
+  dynamoDbIcon = '/assets/icons/dynamodb.png';
+  lambdaIcon = '/assets/icons/lambda.png';
+  microservicesIcon = '/assets/icons/microservices.png';
+  natsIcon = '/assets/icons/nats.png';
+  springIcon = '/assets/icons/spring.png';
+  datadogIcon = '/assets/icons/datadog.png';
+  nodeJsIcon = '/assets/icons/nodejs.png';
 
   protected jobs: JobEntry[] = [
     {
@@ -51,26 +60,21 @@ export class ExperiencePageComponent {
       responsibilities: [
         "Architected and built high-volume systems using message brokers and Kubernetes with Kotlin on the AWS platform",
         "Directly responsible individual (DRI) for cloud integrations with eSIM component vendors",
-        "Extended legacy serverless NodeJS codebase to support new long-term business requirements",
+        "Extended legacy serverless Node.js codebase to support new long-term business requirements",
         "Established and debugged factory software integrations for new production lines for the Rivian R2. Walked factory line to ground system design in real-life context",
         "Implemented eSIM protocols to create one of the first connected cars to use SGP.32 eSIMs"
       ],
       technologies: [
-        // TODO: Update these
-        {title: "Java", logoURL: this.javaIcon},
-        {title: "JUnit5/Mockito", logoURL: this.junitIcon},
-        // Combining JUNit5 and Mockito so that there are an even number of items
-        // {title: "Mockito", logoURL: this.mockitoIcon},
-        {title: "Maven", logoURL: this.mavenIcon},
-        {title: "Apache Tomcat", logoURL: this.tomcatIcon},
-        {title: "Postgres", logoURL: this.postgresIcon},
-        {title: "Jenkins", logoURL: this.jenkinsIcon},
-        {title: "RabbitMQ", logoURL: this.rabbitmqIcon},
-        {title: "REST APIs", logoURL: this.restapiIcon},
-        {title: "Websockets", logoURL: this.websocketIcon},
-        {title: "Linux", logoURL: this.linuxIcon},
-        {title: "SMS Systems", logoURL: this.smsIcon},
-        {title: "Avaya telephony", logoURL: this.phoneIcon},
+        {title: "Kotlin", logoURL: this.kotlinIcon},
+        {title: "Kubernetes", logoURL: this.kubernetesIcon},
+        {title: "DynamoDB", logoURL: this.dynamoDbIcon},
+        {title: "Lambda", logoURL: this.lambdaIcon},
+        {title: "Microservices", logoURL: this.microservicesIcon},
+        {title: "Kafka", logoURL: this.kafkaIcon},
+        {title: "NATS", logoURL: this.natsIcon},
+        {title: "Spring boot", logoURL: this.springIcon},
+        {title: "Datadog", logoURL: this.datadogIcon},
+        {title: "Node.js", logoURL: this.nodeJsIcon},
       ]
     },
     {
