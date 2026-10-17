@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule, AnimationProp } from '@fortawesome/angular-fontawesome';
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
@@ -8,6 +8,7 @@ import { NgOptimizedImage } from '@angular/common';
     selector: 'experience-entry',
     imports: [NgbCollapse, FontAwesomeModule, NgOptimizedImage],
     templateUrl: './experience-entry.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './experience-entry.component.scss'
 })
 export class ExperienceEntryComponent {

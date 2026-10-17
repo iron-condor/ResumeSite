@@ -1,11 +1,12 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ExperienceEntryComponent, JobEntry } from "../experience-entry/experience-entry.component";
 
 @Component({
     selector: 'app-experience-page',
     imports: [NgOptimizedImage, ExperienceEntryComponent],
     templateUrl: './experience-page.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './experience-page.component.scss'
 })
 export class ExperiencePageComponent {

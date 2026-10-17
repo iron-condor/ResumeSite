@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Theme, ThemeToggleService } from '../theme-toggle.service';
@@ -10,6 +10,7 @@ import { githubURL, linkedInURL } from '../app.config';
     selector: 'nav-bar',
     imports: [NgbModule, RouterLink, RouterLinkActive, FontAwesomeModule],
     templateUrl: './nav-bar.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {

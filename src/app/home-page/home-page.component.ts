@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import { NgOptimizedImage } from '@angular/common';
@@ -9,6 +9,7 @@ import { FileService } from '../file.service';
     selector: 'home-page',
     imports: [NgbModule, NavBarComponent, NgOptimizedImage],
     templateUrl: './home-page.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent {
