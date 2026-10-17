@@ -4,7 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Theme, ThemeToggleService } from '../theme-toggle.service';
 import { faMoon, faSun, faBars, faCaretDown, faCaretUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule, AnimationProp } from '@fortawesome/angular-fontawesome';
-import { githubURL, linkedInURL } from '../app.config';
+import { githubURL, linkedInURL } from '../app.constants';
 
 @Component({
     selector: 'nav-bar',

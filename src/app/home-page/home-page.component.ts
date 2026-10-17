@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import { NgOptimizedImage } from '@angular/common';
-import { linkedInURL } from '../app.config';
+import { linkedInURL } from '../app.constants';
 import { FileService } from '../file.service';
 
 @Component({
