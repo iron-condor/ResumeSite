@@ -3,11 +3,10 @@ import { Component } from '@angular/core';
 import { ExperienceEntryComponent, JobEntry } from "../experience-entry/experience-entry.component";
 
 @Component({
-  selector: 'app-experience-page',
-  standalone: true,
-  imports: [NgOptimizedImage, ExperienceEntryComponent, NgForOf],
-  templateUrl: './experience-page.component.html',
-  styleUrl: './experience-page.component.scss'
+    selector: 'app-experience-page',
+    imports: [NgOptimizedImage, ExperienceEntryComponent, NgForOf],
+    templateUrl: './experience-page.component.html',
+    styleUrl: './experience-page.component.scss'
 })
 export class ExperiencePageComponent {
   swampfoxLogoUrl = '/assets/swampfox-logo.png';

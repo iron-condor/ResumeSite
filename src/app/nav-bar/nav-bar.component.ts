@@ -7,11 +7,10 @@ import { FontAwesomeModule, AnimationProp } from '@fortawesome/angular-fontaweso
 import { githubURL, linkedInURL } from '../app.config';
 
 @Component({
-  selector: 'nav-bar',
-  standalone: true,
-  imports: [NgbModule, RouterLink, RouterLinkActive, FontAwesomeModule],
-  templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.scss'
+    selector: 'nav-bar',
+    imports: [NgbModule, RouterLink, RouterLinkActive, FontAwesomeModule],
+    templateUrl: './nav-bar.component.html',
+    styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
   constructor(private themeToggleService: ThemeToggleService, private router: Router) {

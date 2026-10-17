@@ -6,11 +6,10 @@ import { linkedInURL } from '../app.config';
 import { FileService } from '../file.service';
 
 @Component({
-  selector: 'home-page',
-  standalone: true,
-  imports: [NgbModule, NavBarComponent, NgOptimizedImage],
-  templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.scss'
+    selector: 'home-page',
+    imports: [NgbModule, NavBarComponent, NgOptimizedImage],
+    templateUrl: './home-page.component.html',
+    styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent {
   constructor(private fileService: FileService) {}

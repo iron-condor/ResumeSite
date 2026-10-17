@@ -5,11 +5,10 @@ import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 import { NgForOf, NgIf, NgOptimizedImage } from '@angular/common';
 
 @Component({
-  selector: 'experience-entry',
-  standalone: true,
-  imports: [NgbCollapse, FontAwesomeModule, NgForOf, NgIf, NgOptimizedImage],
-  templateUrl: './experience-entry.component.html',
-  styleUrl: './experience-entry.component.scss'
+    selector: 'experience-entry',
+    imports: [NgbCollapse, FontAwesomeModule, NgForOf, NgIf, NgOptimizedImage],
+    templateUrl: './experience-entry.component.html',
+    styleUrl: './experience-entry.component.scss'
 })
 export class ExperienceEntryComponent {
   @Input() jobEntry!: JobEntry;
