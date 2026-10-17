@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Theme, ThemeToggleService } from '../theme-toggle.service';
 import { faMoon, faSun, faBars, faCaretDown, faCaretUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -8,7 +8,7 @@ import { githubURL, linkedInURL } from '../app.constants';
 
 @Component({
     selector: 'nav-bar',
-    imports: [NgbModule, RouterLink, RouterLinkActive, FontAwesomeModule],
+    imports: [NgbModule, RouterLink, FontAwesomeModule],
     templateUrl: './nav-bar.component.html',
     changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './nav-bar.component.scss'
