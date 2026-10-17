@@ -6,7 +6,7 @@
     </h2>
     <img
       [ngSrc]="jobEntry.logoURL"
-      width="105" height="45"
+      [width]="jobEntry.logoWidth ?? 105" [height]="jobEntry.logoHeight ?? 45"
       [alt]="'The logo for ' + jobEntry.companyName"
       class="company-logo"
       />

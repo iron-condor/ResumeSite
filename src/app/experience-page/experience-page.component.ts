@@ -9,6 +9,7 @@ import { ExperienceEntryComponent, JobEntry } from "../experience-entry/experien
     styleUrl: './experience-page.component.scss'
 })
 export class ExperiencePageComponent {
+  rvtechLogoUrl = '/assets/rvtech-logo.png';
   swampfoxLogoUrl = '/assets/swampfox-logo.png';
   mlegLogoUrl = '/assets/mleg-logo.png'
   javaIcon = '/assets/icons/java.png';
@@ -36,13 +37,50 @@ export class ExperiencePageComponent {
 
   protected jobs: JobEntry[] = [
     {
+      companyName: "Rivian & Volkswagen Group Technologies",
+      companyURL: "https://www.rivianvw.tech",
+      duration: "1.5 years",
+      latestPositionName: "Software Engineer II",
+      logoURL: this.rvtechLogoUrl,
+      logoHeight: 75,
+      logoWidth: 75,
+      positions: [
+        {title: "Software Engineer II", start: "May 2025", end: "Present"},
+      ],
+      // TODO: Support adding links in here
+      responsibilities: [
+        "Architected and built high-volume systems using message brokers and Kubernetes with Kotlin on the AWS platform",
+        "Directly responsible individual (DRI) for cloud integrations with eSIM component vendors",
+        "Extended legacy serverless NodeJS codebase to support new long-term business requirements",
+        "Established and debugged factory software integrations for new production lines for the Rivian R2. Walked factory line to ground system design in real-life context",
+        "Implemented eSIM protocols to create one of the first connected cars to use SGP.32 eSIMs"
+      ],
+      technologies: [
+        // TODO: Update these
+        {title: "Java", logoURL: this.javaIcon},
+        {title: "JUnit5/Mockito", logoURL: this.junitIcon},
+        // Combining JUNit5 and Mockito so that there are an even number of items
+        // {title: "Mockito", logoURL: this.mockitoIcon},
+        {title: "Maven", logoURL: this.mavenIcon},
+        {title: "Apache Tomcat", logoURL: this.tomcatIcon},
+        {title: "Postgres", logoURL: this.postgresIcon},
+        {title: "Jenkins", logoURL: this.jenkinsIcon},
+        {title: "RabbitMQ", logoURL: this.rabbitmqIcon},
+        {title: "REST APIs", logoURL: this.restapiIcon},
+        {title: "Websockets", logoURL: this.websocketIcon},
+        {title: "Linux", logoURL: this.linuxIcon},
+        {title: "SMS Systems", logoURL: this.smsIcon},
+        {title: "Avaya telephony", logoURL: this.phoneIcon},
+      ]
+    },
+    {
       companyName: "Swampfox Technologies Inc.",
       companyURL: "https://www.swampfoxinc.com",
       duration: "3 years",
-      latestPositionName: "Senior Software Developer",
+      latestPositionName: "Software Developer II",
       logoURL: this.swampfoxLogoUrl,
       positions: [
-        {title: "Senior Software Developer", start: "Jan 2024", end: "Present"},
+        {title: "Software Developer II", start: "Jan 2024", end: "May 2025"},
         {title: "Software Developer", start: "May 2023", end: "Jan 2024"},
         {title: "Product Development Intern", start: "May 2022", end: "May 2023"}
       ],
@@ -53,7 +91,7 @@ export class ExperiencePageComponent {
         "Served as technical lead/owner of mission critical software for high-availability systems",
         "Met with project managers, engineers and stakeholders from other companies to understand their needs and develop custom systems to integrate with their proprietary infrastructure",
         "Digested protocol specifications to create effective product integrations with existing protocols such as SMPP",
-        "Triaged and debugged live issues with high-volume production call centers during emergencies",
+        "Triaged and debugged live issues for production call centers handling 3,000+ simultaneous calls during critical service interruptions",
         "Wrote documentation and automated tests using JUnit5 and Mockito to ensure maintainability",
         "Served as a mentor and a technical resource for interns during their projects",
         "Attended career fairs, reviewed technical assessments and interviewed interns for summer projects"

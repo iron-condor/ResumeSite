@@ -37,6 +37,7 @@ export class ExperienceEntryComponent {
   }
 }
 
+// TODO: Make this support calculating time at job, so you don't have to update it over time for current posiiton
 export interface JobEntry {
   companyName: string;
   companyURL: string;
@@ -46,6 +47,8 @@ export interface JobEntry {
   positions: JobPosition[];
   responsibilities: string[];
   technologies: JobTechnology[];
+  logoHeight?: number;
+  logoWidth?: number;
 }
 
 export interface JobPosition {
