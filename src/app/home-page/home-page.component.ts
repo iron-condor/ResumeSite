@@ -89,6 +89,11 @@ export class HomePageComponent {
     { height: 18, topMargin: 104, leftMargin: 11 },
   ]
 
+  // Render the light pulsing at different phases to more closely resemble the bay lights
+  cableLightDurations = this.cableData.map(() => ({
+    duration: `${(Math.random() * 3 + 5).toFixed(2)}s` // Random between 1s and 3s
+  }));
+
   fogLayers = Array.from({ length: this.NUM_FOG_CLOUDS }, (_, i) => ({
     left: `-${Math.floor(Math.random() * 300) + 100}px`,
     top: `${Math.floor(Math.random() * 140) + 10}px`,

@@ -48,6 +48,8 @@ $sky_gradient_two_dark: #1B2735;
   --visitedLinkColor: #{$secondary_light};
   --skyGradientOne: #{$sky_gradient_one_light};
   --skyGradientTwo: #{$sky_gradient_two_light};
+  --displayBayLights: none;
+  --displayFog: block;
 }
 
 // mixin that enables css variables in dark mode
@@ -68,4 +70,6 @@ $sky_gradient_two_dark: #1B2735;
   --visitedLinkColor: #{$secondary_dark};
   --skyGradientOne: #{$sky_gradient_one_dark};
   --skyGradientTwo: #{$sky_gradient_two_dark};
+  --displayBayLights: block;
+  --displayFog: none;
 }

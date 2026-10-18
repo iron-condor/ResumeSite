@@ -111,7 +111,7 @@
 }
 
 .bridge-vignette {
-  display: none;
+  display: var(--displayFog);
   position: absolute;
   top: 0;
   left: 0;
@@ -129,7 +129,7 @@
 }
 
 .fog-layer {
-  display: none;
+  display: var(--displayFog);
   position: absolute;
   width: 80px;
   height: 30px;
@@ -187,6 +187,7 @@
 .light-cable {
   width: 2px;
   position: relative;
+  display: var(--displayBayLights);
   
   &::before {
     content: '';
@@ -204,16 +205,80 @@
       transparent 100%
     );
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
-    animation: cable-glow 3s ease-in-out infinite;
+    animation: cable-glow var(--cable-duration, 3s) ease-in-out infinite;
   }
 }
 @keyframes cable-glow {
   0%, 100% {
-    opacity: 0.4;
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.6), 0 0 8px rgba(255, 255, 255, 0.4);
+    opacity: 0.6;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.6);
   }
   50% {
     opacity: 1;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.red-light {
+  display: var(--displayBayLights);
+  position: absolute;
+  width: 4.3px;
+  height: 2px;
+  pointer-events: none;
+  transform: translateX(-50%);
+  opacity: 0.8;
+  left: 50%;
+  top: 22px;
+  z-index: 11;
+  animation: red-blink ease-in-out infinite;
+  animation-duration: 5s;
+}
+
+.red-light::before {
+  display: var(--displayBayLights);
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  filter: blur(7px);
+  background: radial-gradient(circle, rgba(255, 68, 68, 0.8), transparent);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+  animation: red-blink-glow ease-in-out infinite;
+  animation-duration: 5s;
+}
+
+.red-light-1 {
+  margin-left: -149px;
+}
+
+.red-light-2 {
+  margin-left: 141.38px;
+}
+
+@keyframes red-blink {
+  0%, 75% {
+    background-color: #ff4444;
+  }
+  80% {
+    background-color: red;
+  }
+  90%, 100% {
+    background-color: #ff4444;
+  }
+}
+
+@keyframes red-blink-glow {
+  0%, 75% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
   }
 }

@@ -15,9 +15,14 @@
             [style.height.px]="cableData[$index].height"
             [style.marginTop.px]="cableData[$index].topMargin"
             [style.marginLeft.px]="cableData[$index].leftMargin"
+            [style.--cable-duration]="cableLightDurations[$index].duration"
           ></div>
         }
       </div>
+
+      <!-- Red blinking lights -->
+      <div class="red-light red-light-1"></div>
+      <div class="red-light red-light-2"></div>
 
       <!-- Fog Layers -->
       @for (fog of fogLayers; track fog; let last = $last) {
