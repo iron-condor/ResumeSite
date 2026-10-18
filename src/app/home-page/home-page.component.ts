@@ -34,6 +34,15 @@ export class HomePageComponent {
   phoneIcon = '/assets/icons/phone.png'
   cplusplusIcon = '/assets/icons/cplusplus.png'
   jiraIcon = '/assets/icons/jira.png'
+  kotlinIcon = '/assets/icons/kotlin.png'
+  kubernetesIcon = '/assets/icons/kubernetes.png'
+  dynamoDbIcon = '/assets/icons/dynamodb.png'
+  lambdaIcon = '/assets/icons/lambda.png'
+  microservicesIcon = '/assets/icons/microservices.png'
+  natsIcon = '/assets/icons/nats.png'
+  springIcon = '/assets/icons/spring.png'
+  datadogIcon = '/assets/icons/datadog.png'
+  nodeJsIcon = '/assets/icons/nodejs.png'
 
   linkedInURL = linkedInURL;
 
