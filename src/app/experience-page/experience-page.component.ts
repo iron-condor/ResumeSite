@@ -58,8 +58,8 @@ export class ExperiencePageComponent {
         { segments: [{ text: "Architected and built high-volume systems using message brokers and Kubernetes with Kotlin on the AWS platform" }] },
         { segments: [{ text: "Directly responsible individual (DRI) for cloud integrations with eSIM component vendors" }] },
         { segments: [{ text: "Extended legacy serverless Node.js codebase to support new long-term business requirements" }] },
-        { segments: [{ text: "Established and debugged factory software integrations for new production lines for the " }, { text: "Rivian R2", url: "https://rivian.com/r2" }, { text: ". Walked factory line to ground system design in real-life context" }] },
-        { segments: [{ text: "Implemented eSIM protocols to create " }, { text: "one of the first connected cars to use SGP.32 eSIM technology", url: "https://riviantrackr.com/news/rivians-r2-will-be-among-the-first-vehicles-to-launch-with-next-gen-esim-technology" }] }
+        { segments: [{ text: "Established and debugged factory software integrations for new production lines for the" }, { text: "Rivian R2.", url: "https://rivian.com/r2" }, { text: "Walked factory line to ground system design in real-life context" }] },
+        { segments: [{ text: "Implemented eSIM protocols to create" }, { text: "one of the first connected cars to use SGP.32 eSIM technology", url: "https://riviantrackr.com/news/rivians-r2-will-be-among-the-first-vehicles-to-launch-with-next-gen-esim-technology" }] }
       ],
       technologies: [
         { title: "Kotlin", logoURL: this.kotlinIcon },
