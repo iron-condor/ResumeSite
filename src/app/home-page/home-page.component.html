@@ -7,28 +7,18 @@
   />
   <div class="header-scroll-guard"> 
     <div class="golden-gate-container">
-      <div class="fog-container fog-back">
-        <div class="fog-layer fog-layer-1"></div>
-        <div class="fog-layer fog-layer-2"></div>
-        <div class="fog-layer fog-layer-3"></div>
-        <div class="fog-layer fog-layer-4"></div>
-        <div class="fog-layer fog-layer-5"></div>
-        <div class="fog-layer fog-layer-6"></div>
-        <div class="fog-layer fog-layer-7"></div>
-        <div class="fog-layer fog-layer-8"></div>
-        <div class="fog-layer fog-layer-9"></div>
-        <div class="fog-layer fog-layer-10"></div>
-        <div class="fog-layer fog-layer-11"></div>
-        <div class="fog-layer fog-layer-12"></div>
-        <div class="fog-layer fog-layer-13"></div>
-        <div class="fog-layer fog-layer-14"></div>
-        <div class="fog-layer fog-layer-15"></div>
-        <div class="fog-layer fog-layer-16"></div>
-        <div class="fog-layer fog-layer-17"></div>
-        <div class="fog-layer fog-layer-18"></div>
-        <div class="fog-layer fog-layer-19"></div>
-        <div class="fog-layer fog-layer-20"></div>
-      </div>
+      @for (fog of fogLayers; track fog; let last = $last) {
+        <div 
+          class="fog-layer"
+          [style.--left]="fog.left"
+          [style.--top]="fog.top"
+          [style.--duration]="fog.duration"
+          [style.--delay]="fog.delay"
+          [style.--scale]="fog.scale"
+          [style.--opacity]="fog.opacity"
+          [style.--z-index]="fog.zIndex">
+        </div>
+      }
 
       <div class="bridge-bg-gradient"></div>
 
@@ -38,29 +28,6 @@
       width="500" height="150"
       alt="An artistic representation of the Golden Gate Bridge"
       />
-
-      <div class="fog-container fog-front">
-        <div class="fog-layer fog-layer-21"></div>
-        <div class="fog-layer fog-layer-22"></div>
-        <div class="fog-layer fog-layer-23"></div>
-        <div class="fog-layer fog-layer-24"></div>
-        <div class="fog-layer fog-layer-25"></div>
-        <div class="fog-layer fog-layer-26"></div>
-        <div class="fog-layer fog-layer-27"></div>
-        <div class="fog-layer fog-layer-28"></div>
-        <div class="fog-layer fog-layer-29"></div>
-        <div class="fog-layer fog-layer-30"></div>
-        <div class="fog-layer fog-layer-31"></div>
-        <div class="fog-layer fog-layer-32"></div>
-        <div class="fog-layer fog-layer-33"></div>
-        <div class="fog-layer fog-layer-34"></div>
-        <div class="fog-layer fog-layer-35"></div>
-        <div class="fog-layer fog-layer-36"></div>
-        <div class="fog-layer fog-layer-37"></div>
-        <div class="fog-layer fog-layer-38"></div>
-        <div class="fog-layer fog-layer-39"></div>
-        <div class="fog-layer fog-layer-40"></div>
-      </div>
       <div class="bridge-vignette"></div>
     </div>
   </div>

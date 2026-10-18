@@ -5,18 +5,18 @@
   flex-direction: column;
   font-family: serif;
   margin-top: 20px;
+}
 
-  .pfp {
+.pfp {
     border-radius: 100%;
     margin-bottom: 10px;
     z-index: 15; // PFP needs to be higher z-index than the bridge so it isn't covered by the fog
     position: relative;
   }
 
-  .location-header {
-    font-style: italic;
-    margin-top: 10px;
-  }
+.location-header {
+  font-style: italic;
+  margin-top: 10px;
 }
 
 .home-page-body-text {
@@ -48,7 +48,6 @@
 
 
 .skills-list {
-
   li {
     display: flex;
     flex-wrap: nowrap;
@@ -80,110 +79,79 @@
   text-decoration: underline;
 }
 
-.pfp-center-header {
-  .golden-gate-container {
-    position: relative;
-    overflow: hidden;
-    width: 500px;
-    height: 150px;
-    margin-top: -80px;
-    max-width: 100vw;
-    display: flex;
-    justify-content: center;
+.golden-gate-container {
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  height: 150px;
+  margin-top: -80px;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+}
 
-    .bridge-bg-gradient {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      // Vertical gradient from top (#325973) to bottom (#C0D634)
-      background: linear-gradient(to bottom, #325973, #C0D6E4);
-      z-index: 5; // Higher than fog, lower than bridge
-      pointer-events: none;
-    }
+.bridge-bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // Vertical gradient from top (#325973) to bottom (#C0D634)
+  background: linear-gradient(to bottom, #325973, #C0D6E4);
+  z-index: 5; // Higher than fog, lower than bridge
+  pointer-events: none;
+}
 
-    .golden-gate-bridge {
-      position: relative;
-      object-position: center;
-      max-width: none;
-      flex-shrink: 0;
-      z-index: 10; // Keeps bridge at the bottom
-    }
+.golden-gate-bridge {
+  position: relative;
+  object-position: center;
+  max-width: none;
+  flex-shrink: 0;
+  z-index: 10; // Keeps bridge at the bottom
+}
 
-    .bridge-vignette {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 20; // Must be higher than the foreground fog
-      
-      // This creates a fade-out on the left and right edges
-      background: linear-gradient(
-        to right, 
-        var(--background) 0%, 
-        transparent 15%, 
-        transparent 85%, 
-        var(--background) 100%
-      );
-    }
+.bridge-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 20; // Must be higher than the foreground fog
 
-    .fog-layer {
-      position: absolute;
-      width: 80px;
-      height: 30px;
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 20px;
-      animation: drift-cloud linear infinite;
+  // This creates a fade-out on the left and right edges
+  background: linear-gradient(to right,
+      var(--background) 0%,
+      transparent 15%,
+      transparent 85%,
+      var(--background) 100%);
+}
 
-      &::before,
-      &::after {
-        content: '';
-        position: absolute;
-        background: inherit;
-        border-radius: 50%;
-      }
+.fog-layer {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  animation: drift-cloud linear infinite;
 
-      &::before {
-        width: 50px;
-        height: 50px;
-        top: -25px;
-        left: 15px;
-      }
+  left: var(--left, -100px);
+  top: var(--top, 50px);
+  animation-duration: var(--duration, 30s);
+  animation-delay: var(--delay, 0s);
+  transform: scale(var(--scale, 1));
+  opacity: var(--opacity, 0.8);
+  z-index: var(--z-index, 1);
 
-      &::after {
-        width: 40px;
-        height: 40px;
-        top: -15px;
-        right: 10px;
-        box-shadow: -30px 0 0 0 inherit;
-      }
-    }
-
-    // Loop for all clouds
-    @for $i from 1 through 60 {
-      .fog-layer-#{$i} {
-        left: -#{random(200) + 100}px;
-        top: #{random(110) + 10}px;
-        animation-duration: #{random(20) + 50}s;
-        animation-delay: -#{random(30)}s;
-        transform: scale(#{random(5) / 10 + 0.5});
-
-        // Z-INDEX LOGIC:
-        @if $i <= 20 {
-          z-index: 6;
-          opacity: 0.5; // Make background clouds slightly more faded for depth
-        }
-
-        @else {
-          z-index: 11;
-          opacity: 0.9; // Foreground clouds are more vivid
-        }
-      }
-    }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
   }
+  &::before { width: 50px; height: 50px; top: -25px; left: 15px; }
+  &::after { width: 40px; height: 40px; top: -15px; right: 10px; box-shadow: -30px 0 0 0 inherit; }
 }
 
 @keyframes drift-cloud {

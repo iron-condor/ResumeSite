@@ -5,14 +5,14 @@ import { linkedInURL } from '../app.constants';
 import { FileService } from '../file.service';
 
 @Component({
-    selector: 'home-page',
-    imports: [NgbModule, NgOptimizedImage],
-    templateUrl: './home-page.component.html',
-    changeDetection: ChangeDetectionStrategy.Eager,
-    styleUrl: './home-page.component.scss'
+  selector: 'home-page',
+  imports: [NgbModule, NgOptimizedImage],
+  templateUrl: './home-page.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
+  styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent {
-  constructor(private fileService: FileService) {}
+  constructor(private fileService: FileService) { }
   pfpUrl = '/assets/pfp.jpg';
   goldenGateUrl = '/assets/golden_gate.png'
 
@@ -46,6 +46,19 @@ export class HomePageComponent {
   nodeJsIcon = '/assets/icons/nodejs.png'
 
   linkedInURL = linkedInURL;
+
+  NUM_FOG_CLOUDS = 40
+
+  // Create an array of 60 objects with random values
+  fogLayers = Array.from({ length: this.NUM_FOG_CLOUDS }, (_, i) => ({
+    left: `-${Math.floor(Math.random() * 200) + 100}px`,
+    top: `${Math.floor(Math.random() * 110) + 10}px`,
+    duration: `${Math.floor(Math.random() * 20) + 50}s`,
+    delay: `-${Math.floor(Math.random() * 30)}s`,
+    scale: (Math.random() * 0.5 + 0.5).toFixed(2),
+    opacity: i <= (this.NUM_FOG_CLOUDS / 2) ? 0.5 : 0.9,
+    zIndex: i <= (this.NUM_FOG_CLOUDS / 2) ? 6 : 11,
+  }));
 
   downloadResume() {
     const url = '/assets/resume.pdf';
