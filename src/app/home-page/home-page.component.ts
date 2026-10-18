@@ -3,6 +3,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgOptimizedImage } from '@angular/common';
 import { linkedInURL } from '../app.constants';
 import { FileService } from '../file.service';
+import { ThemeToggleService } from '../theme-toggle.service';
 
 @Component({
   selector: 'home-page',
@@ -12,9 +13,10 @@ import { FileService } from '../file.service';
   styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent {
-  constructor(private fileService: FileService) { }
+  constructor(private fileService: FileService, private themeService: ThemeToggleService) { }
   pfpUrl = '/assets/pfp.jpg';
   goldenGateUrl = '/assets/golden_gate.png'
+  bayBridgeUrl = '/assets/bay_bridge.png'
 
   javaIcon = '/assets/icons/java.png';
   junitIcon = '/assets/icons/junit5.png';
@@ -71,5 +73,9 @@ export class HomePageComponent {
       a.click();
       URL.revokeObjectURL(objectUrl);
     });
+  }
+
+  currentTheme(): string {
+    return this.themeService.currentTheme;
   }
 }

@@ -6,7 +6,7 @@
     alt="An outdoor photograph of a young man with long black hair and glasses leaning against a brick wall, wearing a black shirt."
   />
   <div class="header-scroll-guard"> 
-    <div class="golden-gate-container">
+    <div class="bridge-container">
       @for (fog of fogLayers; track fog; let last = $last) {
         <div 
           class="fog-layer"
@@ -24,8 +24,8 @@
 
       <!-- Original image is 500x278. I think it looks better on the page if it's a little squished though  -->
       <img
-      [ngSrc]="goldenGateUrl"
-      class="golden-gate-bridge"
+      [ngSrc]="currentTheme() === 'light' ? goldenGateUrl : bayBridgeUrl"
+      class="bridge"
       width="500" height="180"
       alt="An artistic representation of the Golden Gate Bridge"
       />
