@@ -4,6 +4,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ExperiencePageComponent } from './experience-page/experience-page.component';
 
 export const routes: Routes = [
+  {path: '', component: HomePageComponent},
   {path: 'home', component: HomePageComponent},
   {path: 'experience', component: ExperiencePageComponent},
   // {path: 'projects', component: ProjectsComponent},
