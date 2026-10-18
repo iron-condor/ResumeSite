@@ -9,6 +9,7 @@
   .pfp {
     border-radius: 100%;
     margin-bottom: 10px;
+    z-index: 10; // PFP needs to be higher z-index than the bridge so it isn't covered by the fog
   }
 
   .location-header {
@@ -92,4 +93,96 @@
   color: var(--secondaryVariant);
   cursor: pointer;
   text-decoration: underline; 
+}
+
+.pfp-center-header {
+  .golden-gate-container {
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    height: 150px;
+    margin-top: -80px;
+    display: flex;
+    justify-content: center;
+    z-index: 1; // Needs to be lower than the PFP's z-index so the fog doesn't cover it
+
+    .golden-gate-bridge {
+      object-position: center;
+      max-width: none;
+      flex-shrink: 0;
+      z-index: 1; // Keeps bridge at the bottom
+    }
+
+    .fog-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: screen; // This makes the fog "brighten" the image it's over
+      z-index: 2; 
+      
+      /* This creates a soft vignette effect so the fog fades out 
+         at the edges of the Golden Gate container */
+      mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+
+      .fog-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background: radial-gradient(
+          circle at 25% 50%, 
+          rgba(120, 120, 120, 0.7) 0%, 
+          transparent 60%
+        ),
+        radial-gradient(
+          circle at 75% 50%, 
+          rgba(120, 120, 120, 0.7) 0%, 
+          transparent 60%
+        );
+
+        background-size: 50% 100%;
+        animation: roll-fog linear infinite;
+      }
+
+      .fog-layer-1 {
+        animation-duration: 6s; // Was 15s
+        opacity: 0.6;
+        filter: blur(6px);
+      }
+
+      .fog-layer-2 {
+        animation-duration: 4s; // Was 25s
+        opacity: 0.4;
+        filter: blur(12px);
+        animation-delay: -5s;
+      }
+
+      .fog-layer-3 {
+        animation-duration: 2s; // Was 20s
+        opacity: 0.5;
+        filter: blur(18px);
+        animation-delay: -10s;
+      }
+
+    }
+
+  }
+}
+@keyframes roll-fog {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(-25%) scale(1.1); // Slight swell in the middle
+    opacity: 0.9;                          // Becomes denser halfway through
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.6;
+  }
 }
