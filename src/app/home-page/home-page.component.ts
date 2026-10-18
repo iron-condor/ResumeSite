@@ -14,6 +14,7 @@ import { FileService } from '../file.service';
 export class HomePageComponent {
   constructor(private fileService: FileService) {}
   pfpUrl = '/assets/pfp.jpg';
+  goldenGateUrl = '/assets/golden_gate.png'
 
   javaIcon = '/assets/icons/java.png';
   junitIcon = '/assets/icons/junit5.png';
