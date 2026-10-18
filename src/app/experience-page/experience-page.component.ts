@@ -54,9 +54,8 @@ export class ExperiencePageComponent {
       logoHeight: 75,
       logoWidth: 75,
       positions: [
-        { title: "Software Engineer II", start: "May 2025", end: "Present" },
+        { title: "Software Engineer II", start: new Date(2025, 4), end: undefined },
       ],
-      // TODO: Support adding links in here
       responsibilities: [
         { segments: [{ text: "Architected and built high-volume systems using message brokers and Kubernetes with Kotlin on the AWS platform" }] },
         { segments: [{ text: "Directly responsible individual (DRI) for cloud integrations with eSIM component vendors" }] },
@@ -84,9 +83,9 @@ export class ExperiencePageComponent {
       latestPositionName: "Software Developer II",
       logoURL: this.swampfoxLogoUrl,
       positions: [
-        { title: "Software Developer II", start: "Jan 2024", end: "May 2025" },
-        { title: "Software Developer", start: "May 2023", end: "Jan 2024" },
-        { title: "Product Development Intern", start: "May 2022", end: "May 2023" }
+        { title: "Software Developer II", start: new Date(2024, 0), end: new Date(2025, 4) },
+        { title: "Software Developer", start: new Date(2023, 4), end: new Date(2024, 0) },
+        { title: "Product Development Intern", start: new Date(2022, 4), end: new Date(2023, 4) }
       ],
       responsibilities: [
         { segments: [{ text: "Developed and maintained telecom software that powers enterprise call centers using Java, SQL and CCXML/VXML" }] },
@@ -123,7 +122,7 @@ export class ExperiencePageComponent {
       duration: "1.5 years",
       logoURL: this.mlegLogoUrl,
       latestPositionName: "Undergraduate Research Assistant",
-      positions: [{ title: "Undergraduate Research Assistant", start: "Sep 2019", end: "Dec 2020" }],
+      positions: [{ title: "Undergraduate Research Assistant", start: new Date(2019, 8), end: new Date(2020, 11) }],
       responsibilities: [
         { segments: [{ text: "Analyzed scientific problems to apply artificial intelligence and deep learning models" }] },
         { segments: [{ text: "Studied and implemented existing machine, deep learning, and evolutionary programming models within larger systems to find better systems for approximating thermal properties of hypothetical materials" }] },
