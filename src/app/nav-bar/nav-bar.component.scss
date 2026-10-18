@@ -5,6 +5,7 @@
   background-color: var(--onBackground);
   border-bottom: 0px;
   display: block;
+  z-index: 100;
 
   .nav-controls-container {
     display: flex;
