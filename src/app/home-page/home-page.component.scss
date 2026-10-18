@@ -9,7 +9,7 @@
   .pfp {
     border-radius: 100%;
     margin-bottom: 10px;
-    z-index: 10; // PFP needs to be higher z-index than the bridge so it isn't covered by the fog
+    z-index: 15; // PFP needs to be higher z-index than the bridge so it isn't covered by the fog
     position: relative;
   }
 
@@ -91,12 +91,24 @@
     display: flex;
     justify-content: center;
 
+    .bridge-bg-gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      // Vertical gradient from top (#325973) to bottom (#C0D634)
+      background: linear-gradient(to bottom, #325973, #C0D6E4);
+      z-index: 5; // Higher than fog, lower than bridge
+      pointer-events: none;
+    }
+
     .golden-gate-bridge {
       position: relative;
       object-position: center;
       max-width: none;
       flex-shrink: 0;
-      z-index: 1; // Keeps bridge at the bottom
+      z-index: 10; // Keeps bridge at the bottom
     }
 
     .bridge-vignette {
@@ -155,17 +167,18 @@
       .fog-layer-#{$i} {
         left: -#{random(200) + 100}px;
         top: #{random(110) + 10}px;
-        animation-duration: #{random(20) + 20}s;
+        animation-duration: #{random(20) + 50}s;
         animation-delay: -#{random(30)}s;
         transform: scale(#{random(5) / 10 + 0.5});
 
         // Z-INDEX LOGIC:
         @if $i <= 20 {
+          z-index: 6;
           opacity: 0.5; // Make background clouds slightly more faded for depth
         }
 
         @else {
-          z-index: 2;
+          z-index: 11;
           opacity: 0.9; // Foreground clouds are more vivid
         }
       }
