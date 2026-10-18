@@ -48,7 +48,6 @@ export class ExperiencePageComponent {
     {
       companyName: "Rivian & Volkswagen Group Technologies",
       companyURL: "https://www.rivianvw.tech",
-      latestPositionName: "Software Engineer II",
       logoURL: this.rvtechLogoUrl,
       logoHeight: 75,
       logoWidth: 75,
@@ -78,7 +77,6 @@ export class ExperiencePageComponent {
     {
       companyName: "Swampfox Technologies Inc.",
       companyURL: "https://www.swampfoxinc.com",
-      latestPositionName: "Software Developer II",
       logoURL: this.swampfoxLogoUrl,
       positions: [
         { title: "Software Developer II", start: new Date(2024, 0), end: new Date(2025, 4) },
@@ -118,7 +116,6 @@ export class ExperiencePageComponent {
       companyName: "University of South Carolina",
       companyURL: "http://mleg.cse.sc.edu",
       logoURL: this.mlegLogoUrl,
-      latestPositionName: "Undergraduate Research Assistant",
       positions: [{ title: "Undergraduate Research Assistant", start: new Date(2019, 8), end: new Date(2020, 11) }],
       responsibilities: [
         { segments: [{ text: "Analyzed scientific problems to apply artificial intelligence and deep learning models" }] },

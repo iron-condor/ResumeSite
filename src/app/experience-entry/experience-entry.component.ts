@@ -71,7 +71,6 @@ export class ExperienceEntryComponent {
 export interface JobEntry {
   companyName: string;
   companyURL: string;
-  latestPositionName: string;
   logoURL: string;
   positions: JobPosition[];
   responsibilities: Responsibility[];

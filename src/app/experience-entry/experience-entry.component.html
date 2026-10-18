@@ -12,7 +12,7 @@
       />
   </div>
   <h5>
-    {{jobEntry.latestPositionName}}
+    {{jobEntry.positions[0].title}}
     @if (jobEntry.positions.length > 1) {
       <fa-icon
         (click)="togglePositionsCollapsed()"
