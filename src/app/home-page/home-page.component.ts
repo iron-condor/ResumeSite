@@ -49,13 +49,14 @@ export class HomePageComponent {
 
   NUM_FOG_CLOUDS = 40
 
-  // Create an array of 60 objects with random values
   fogLayers = Array.from({ length: this.NUM_FOG_CLOUDS }, (_, i) => ({
-    left: `-${Math.floor(Math.random() * 200) + 100}px`,
-    top: `${Math.floor(Math.random() * 110) + 10}px`,
+    left: `-${Math.floor(Math.random() * 300) + 100}px`,
+    top: `${Math.floor(Math.random() * 140) + 10}px`,
     duration: `${Math.floor(Math.random() * 20) + 50}s`,
     delay: `-${Math.floor(Math.random() * 30)}s`,
     scale: (Math.random() * 0.5 + 0.5).toFixed(2),
+    // Half of the clouds should be in the foreground (and more opaque),
+    // half should be in the background (and less opaque)
     opacity: i <= (this.NUM_FOG_CLOUDS / 2) ? 0.5 : 0.9,
     zIndex: i <= (this.NUM_FOG_CLOUDS / 2) ? 6 : 11,
   }));
