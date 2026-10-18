@@ -97,7 +97,7 @@
   width: 100%;
   height: 100%;
   // Vertical gradient from top (#325973) to bottom (#C0D634)
-  background: linear-gradient(to bottom, #325973, #C0D6E4);
+  background: linear-gradient(to bottom, var(--skyGradientOne), var(--skyGradientTwo));
   z-index: 5; // Higher than fog, lower than bridge
   pointer-events: none;
 }

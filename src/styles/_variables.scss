@@ -11,6 +11,8 @@ $onSecondary_light: #272727;
 $onBackground_light: #272727;
 $onSurface_light: #272727;
 $onError_light: #f0f0f0;
+$sky_gradient_one_light: #325973;
+$sky_gradient_two_light: #C0D6E4;
 
 // Dark theme
 $primary_dark: #6b8fa0;
@@ -25,6 +27,8 @@ $onSecondary_dark: #f0f0f0;
 $onBackground_dark: #e8f0f5;
 $onSurface_dark: #e8f0f5;
 $onError_dark: #272727;
+$sky_gradient_one_dark: #0B101B;
+$sky_gradient_two_dark: #1B2735;
 
 // mixin that enables css variables in light mode
 @mixin lighten() {
@@ -40,8 +44,10 @@ $onError_dark: #272727;
   --onBackground: #{$onBackground_light};
   --onSurface: #{$onSurface_light};
   --onError: #{$onError_light};
-  --unvisitedLinkColor: #{$secondaryVariant_dark};
-  --visitedLinkColor: #{$secondary_dark};
+  --unvisitedLinkColor: #{$secondaryVariant_light};
+  --visitedLinkColor: #{$secondary_light};
+  --skyGradientOne:  #{$sky_gradient_one_light};
+  --skyGradientTwo:  #{$sky_gradient_two_light};
 }
 
 // mixin that enables css variables in dark mode
@@ -60,4 +66,6 @@ $onError_dark: #272727;
   --onError: #{$onError_dark};
   --unvisitedLinkColor: #{$secondaryVariant_dark};
   --visitedLinkColor: #{$secondary_dark};
+  --skyGradientOne:  #{$sky_gradient_one_dark};
+  --skyGradientTwo:  #{$sky_gradient_two_dark};
 }
