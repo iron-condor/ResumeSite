@@ -48,7 +48,6 @@ export class ExperiencePageComponent {
     {
       companyName: "Rivian & Volkswagen Group Technologies",
       companyURL: "https://www.rivianvw.tech",
-      duration: "1.5 years",
       latestPositionName: "Software Engineer II",
       logoURL: this.rvtechLogoUrl,
       logoHeight: 75,
@@ -79,7 +78,6 @@ export class ExperiencePageComponent {
     {
       companyName: "Swampfox Technologies Inc.",
       companyURL: "https://www.swampfoxinc.com",
-      duration: "3 years",
       latestPositionName: "Software Developer II",
       logoURL: this.swampfoxLogoUrl,
       positions: [
@@ -119,7 +117,6 @@ export class ExperiencePageComponent {
     {
       companyName: "University of South Carolina",
       companyURL: "http://mleg.cse.sc.edu",
-      duration: "1.5 years",
       logoURL: this.mlegLogoUrl,
       latestPositionName: "Undergraduate Research Assistant",
       positions: [{ title: "Undergraduate Research Assistant", start: new Date(2019, 8), end: new Date(2020, 11) }],
