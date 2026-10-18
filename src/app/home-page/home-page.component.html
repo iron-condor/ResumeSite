@@ -7,6 +7,19 @@
   />
   <div class="header-scroll-guard"> 
     <div class="bridge-container">
+      <!-- Bay Lights Overlay - Vertical Suspension Cables -->
+      <div class="lights-overlay">
+        @for (cableIndex of [].constructor(NUM_VERTICAL_CABLES); track $index) {
+          <div 
+            class="light-cable"
+            [style.height.px]="cableData[$index].height"
+            [style.marginTop.px]="cableData[$index].topMargin"
+            [style.marginLeft.px]="cableData[$index].leftMargin"
+          ></div>
+        }
+      </div>
+
+      <!-- Fog Layers -->
       @for (fog of fogLayers; track fog; let last = $last) {
         <div 
           class="fog-layer"
@@ -24,10 +37,10 @@
 
       <!-- Original image is 500x278. I think it looks better on the page if it's a little squished though  -->
       <img
-      [ngSrc]="currentTheme() === 'light' ? goldenGateUrl : bayBridgeUrl"
-      class="bridge"
-      width="500" height="180"
-      alt="An artistic representation of the Golden Gate Bridge"
+        [ngSrc]="currentTheme() === 'light' ? goldenGateUrl : bayBridgeUrl"
+        class="bridge"
+        width="500" height="180"
+        alt="An artistic representation of the Golden Gate Bridge"
       />
       <div class="bridge-vignette"></div>
     </div>
@@ -81,7 +94,6 @@
 
   <section>
     <h4>Skills and Technologies</h4>
-    <!-- TODO: Update -->
     <ul class="skills-list">
       <li>
         <img [ngSrc]="javaIcon" class="skill-icon" width="50" height="50"/>
