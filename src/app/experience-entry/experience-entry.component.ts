@@ -38,11 +38,11 @@ export class ExperienceEntryComponent {
   // Calculates the time spent in a given position and returns it as a formatted string,
   // rounded to the nearest half-year
   calculateDuration(): String {
-    const millisInPosition = this.jobEntry.positions.reduce((accumulator, position) => {
+    const millisAtJob = this.jobEntry.positions.reduce((accumulator, position) => {
       return accumulator + ((position.end ?? new Date()).valueOf() - position.start.valueOf());
     }, 0);
-    const yearsInPosition = millisInPosition / 1_000 / 60 / 60 / 24 / 365;
-    const roundedToNearestHalf = Math.round(yearsInPosition * 2) / 2;
+    const yearsAtJob = millisAtJob / 1_000 / 60 / 60 / 24 / 365;
+    const roundedToNearestHalf = Math.round(yearsAtJob * 2) / 2;
     return roundedToNearestHalf + (roundedToNearestHalf === 1 ? " year" : " years");
   }
 
