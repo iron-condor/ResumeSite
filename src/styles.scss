@@ -19,12 +19,12 @@ body {
 
 /* unvisited */
 a:link {
-  color: var(--secondaryVariant);
+  color: var(--unvisitedLinkColor);
 }
 
 /* visited link */
 a:visited {
-  color: var(--secondary);
+  color: var(--visitedLinkColor);
 }
 
 .footer {
