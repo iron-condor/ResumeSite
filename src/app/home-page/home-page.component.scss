@@ -223,7 +223,7 @@
   display: var(--displayBayLights);
   position: absolute;
   width: 4.3px;
-  height: 2px;
+  height: 2.2px;
   pointer-events: none;
   transform: translateX(-50%);
   opacity: 0.8;
@@ -252,11 +252,11 @@
 }
 
 .red-light-1 {
-  margin-left: -149px;
+  margin-left: -147.5px;
 }
 
 .red-light-2 {
-  margin-left: 141.38px;
+  margin-left: 146.38px;
 }
 
 @keyframes red-blink {
