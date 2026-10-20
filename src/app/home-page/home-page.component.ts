@@ -43,7 +43,6 @@ export class HomePageComponent {
   dynamoDbIcon = '/assets/icons/dynamodb.png'
   lambdaIcon = '/assets/icons/lambda.png'
   microservicesIcon = '/assets/icons/microservices.png'
-  natsIcon = '/assets/icons/nats.png'
   springIcon = '/assets/icons/spring.png'
   datadogIcon = '/assets/icons/datadog.png'
   nodeJsIcon = '/assets/icons/nodejs.png'
