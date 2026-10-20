@@ -12,6 +12,7 @@
     margin-bottom: 10px;
     z-index: 15; // PFP needs to be higher z-index than the bridge so it isn't covered by the fog
     position: relative;
+    filter: drop-shadow(#000000 3px 4px 4px);
   }
 
 .location-header {
